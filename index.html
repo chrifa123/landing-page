@@ -2,46 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Improve the quality of old photos for free</title>
+  <title>Claim Your Gift</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="5;url=https://shrinkme.ink/w1">
   <style>
     body {
-      background: linear-gradient(to right, #141e30, #243b55);
-      color: #fff;
+      background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+      color: white;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 100px 20px;
+      padding: 50px 20px;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      border-radius: 20px;
+      display: inline-block;
+      max-width: 400px;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+      font-size: 2em;
+      margin-bottom: 10px;
     }
     p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
+      font-size: 1.2em;
+      margin-bottom: 20px;
     }
-    .btn {
-      background: #00c6ff;
-      background: linear-gradient(to right, #0072ff, #00c6ff);
-      color: white;
+    #countdown {
+      font-size: 1.5em;
+      margin: 20px 0;
+    }
+    #claim-btn {
+      font-size: 1.2em;
       padding: 15px 30px;
-      font-size: 1.1rem;
+      background-color: #ff9800;
+      color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s ease;
+      display: none;
     }
-    .btn:hover {
-      background: #00b4ff;
+    #claim-btn:hover {
+      background-color: #e68900;
+    }
+    .notification {
+      background: rgba(255,255,255,0.2);
+      padding: 10px;
+      margin-top: 30px;
+      border-radius: 10px;
+      font-size: 0.95em;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>Your File is Almost Ready!</h1>
-  <p>Please wait while we prepare your secure download link...</p>
-  <a class="btn" href="https://shrinkme.ink/w1">Click here if you are not redirected</a>
+  <div class="container">
+    <h1>🎉 Congratulations!</h1>
+    <p>You have 1 exclusive gift waiting for you.</p>
+    <div id="countdown">Please wait... 5</div>
+    <button id="claim-btn" onclick="window.location.href='https://doctoredits.com/1812446'">Click to Claim</button>
+    <div class="notification">🎁 Someone from Algeria just won an iPhone!</div>
+  </div>
+
+  <!-- Countdown Script -->
+  <script>
+    let seconds = 5;
+    let countdownEl = document.getElementById("countdown");
+    let buttonEl = document.getElementById("claim-btn");
+
+    let timer = setInterval(() => {
+      seconds--;
+      countdownEl.textContent = "Please wait... " + seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        countdownEl.style.display = "none";
+        buttonEl.style.display = "inline-block";
+      }
+    }, 1000);
+  </script>
+
+  <!-- PopCash Code -->
+  <script type="text/javascript">
+    var uid = '489377';
+    var wid = '738925';
+    var pop_fback = '1';
+  </script>
+  <script type="text/javascript" src="https://cdn.popcash.net/pop.js"></script>
 </body>
 </html>
-
