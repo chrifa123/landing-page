@@ -2,33 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loading...</title>
-  <meta http-equiv="refresh" content="1;url=https://www.profitableratecpm.com/ug1z4yn52?key=217b454f16fb033cd27b6bc0c720eb36" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Win a Bonus!</title>
   <style>
     body {
-      background-color: #000;
-      color: #fff;
+      background: radial-gradient(circle, #4a148c, #000);
+      color: white;
       font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
       height: 100vh;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    #countdown {
+      font-size: 3em;
+      font-weight: bold;
+      color: #ffd700;
     }
     p {
-      font-size: 16px;
-      opacity: 0.8;
+      margin-top: 10px;
+      font-size: 1.2em;
     }
   </style>
 </head>
 <body>
-  <h1>Preparing your offer...</h1>
-  <p>Please wait, you are being redirected.</p>
+  <h1>🎉 You've been selected!</h1>
+  <p>Redirecting you to your reward in</p>
+  <div id="countdown">5</div>
+  <p>Please wait...</p>
+
+  <script>
+    let seconds = 5;
+    const countdown = document.getElementById("countdown");
+    const interval = setInterval(() => {
+      seconds--;
+      countdown.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = "https://popcash.net/world/go/489377/738925/";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
